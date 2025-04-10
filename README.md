@@ -3,7 +3,7 @@
 Discover the cultural, historical, and spiritual heritage of India with **Temples in India** — a visually rich web project that showcases ancient and revered temples from across the country.
 
 ## 🌟 Live Demo
-[Click here to explore the site](https://yourusername.github.io/Temples_in_India)
+[https://yourusername.github.io/Temples_in_India](https://rohan-patil11.github.io/Recipee-Finder/)
 
 ## 📌 Features
 
