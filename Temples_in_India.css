@@ -1,0 +1,948 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,400;1,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Oswald:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,400;1,500&family=Roboto:ital@1&display=swap');
+
+
+@import url('https://kit.fontawesome.com/a076d05399.js');
+
+:root {
+    --yellow: rgb(255, 0, 0);
+    --light-yellow: #d84a4a;
+    --red-shade: rgb(255, 0, 0);
+    --light-red-shade: #d84a4a;
+    --black: rgb(0, 0, 0);
+    --border: 1px solid rgba(0, 0, 0, .3);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --light-color: rgba(47, 45, 45, 0.936);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    /* transition: all .1s linear; */
+}
+
+
+
+html {
+    font-size: 65%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 4.5rem;
+}
+
+.heading span {
+    position: relative;
+    z-index: 0;
+}
+
+.heading span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: .1rem;
+    border-radius: 1rem;
+    background-color: var(--light-yellow);
+    color: var(--black);
+    font-weight: 500;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: .8rem 1.5rem;
+}
+
+.btn:hover {
+    background-color: var(--yellow);
+}
+
+.header {
+    position: fixed;
+    padding: 0px 20px;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4%;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    color: var(--black);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header .logo span {
+    color: var(--yellow);
+    font-size: 3rem;
+}
+
+.header .navbar a {
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin: 0 1px;
+    color: var(--black);
+    text-decoration: none;
+    /* background-color: #eee2e2; */
+    padding: 4px 10px;
+    border-radius: 8px;
+}
+
+.header .navbar a:hover {
+    color: var(--yellow);
+    /* font-size: 2.2rem; */
+    font-weight: bold;
+}
+
+.header .btn {
+    margin-top: 0;
+}
+
+.header #login-btn i {
+    font-size: 2.5rem;
+    color: var(--black);
+    cursor: pointer;
+    display: none;
+}
+
+#menu-btn {
+    font-size: 3rem;
+    background: #fff;
+    color: var(--black);
+    cursor: pointer;
+    display: none;
+}
+
+.header.active {
+    box-shadow: var(--box-shadow);
+    padding: 2rem 9%;
+}
+
+#menu-btn .fa-times {
+    transform: rotate(180degre);
+}
+
+
+.header #menu-btn:hover {
+    cursor: pointer;
+}
+
+/* .header .navbar {
+display: flex;
+background-color: #fffefe;
+padding: 10px 4px;
+border-radius: 8px;
+justify-content: space-evenly;
+} */
+
+
+
+
+
+
+
+
+/* LOGIN FORM CSS START */
+
+.login-form {
+    position: fixed;
+    top: -105%;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.login-form.active {
+    top: 0;
+    opacity: 1;
+}
+
+.login-form form {
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    background: #fff;
+    border: var(--border);
+    text-align: center;
+    width: 40rem;
+}
+
+.login-form form .buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login-form form .btn {
+    /* for google and facebook */
+    display: block;
+    width: 100%;
+    margin: 5rem 0;
+    border: var(--border);
+    padding: 1rem 0;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: #e59d9d;
+}
+
+.login-form form .btn:hover {
+    background-color: #da4646;
+}
+
+.login-form form h3 {
+    color: var(--black);
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+
+
+.login-form form .box {
+    margin: 2rem 0;
+    width: 100%;
+    text-transform: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: var(--border);
+    border-radius: 5px;
+}
+
+.login-form form p {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.login-form form p a {
+    text-decoration: underline;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: #d84a4a;
+    font-weight: 700;
+}
+
+.login-form #close-login-form {
+    position: absolute;
+    top: 5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    color: #000000;
+    cursor: pointer;
+}
+
+/* for login button */
+/* .login-form form .btn {
+margin: 1rem 0;
+padding: 1rem 2rem;
+width: 50%;
+border: var(--border);
+font-size: 1.6rem;
+color: rgb(0, 0, 0);
+text-transform: none;
+border-radius: 5px;
+} */
+
+
+/*for login button but it will also work for google and facebook*/
+/* .login-form form .btn:hover {
+background-color: #fff200;
+font-size: 1.8rem;
+font-weight: 600;
+} */
+
+
+
+
+
+/* LOGIN FORM CSS ENDS */
+
+
+
+/* CREATE ACCOUNT CSS START */
+
+.create-form {
+    position: fixed;
+    top: -105%;
+    left: 0;
+    z-index: 1111;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.create-form.active {
+    top: 0;
+    opacity: 1;
+}
+
+.create-form form {
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    background: #fff;
+    border: var(--border);
+    text-align: center;
+    width: 40rem;
+}
+
+.create-form form .btn {
+    /* for google and facebook */
+    display: block;
+    width: 100%;
+    margin: 4rem 0;
+    border: var(--border);
+    padding: 1rem 0;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: #e59d9d;
+}
+
+.create-form form h3 {
+    color: var(--black);
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.create-form form .box {
+    margin: 1.5rem 0;
+    width: 100%;
+    text-transform: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: var(--border);
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.create-form form .btn {
+    background: #cd8b88;
+    width: 50%;
+    margin: 3rem auto;
+    font-size: 1.8rem;
+}
+
+.create-form form .btn:hover {
+    width: 55%;
+    background: #e59d9d;
+    font-size: 2rem;
+    font-weight: 600
+}
+
+.create-form form p {
+    font-size: 1.4rem;
+}
+
+.create-form form p a {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--yellow);
+}
+
+.create-form #create-form-close {
+    position: absolute;
+    top: 5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    color: #000000;
+    cursor: pointer;
+}
+
+/* CREATE ACCOUNT END */
+
+
+/* HOME SECTION CSS STARTS */
+
+
+.home {
+    padding-top: 10rem;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.home h1 {
+    font-size: 5vw;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 2rem;
+}
+
+.home img {
+    width: 100%;
+    margin: 1rem 0;
+
+
+}
+
+.home a {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem 3rem;
+    margin: 5rem 5rem;
+    margin-bottom: 10rem;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 1rem;
+    background-color: #d7b392;
+    /* border: 1px solid #000000; */
+}
+
+
+
+/* HOME SECTION CSS ENDS */
+
+/*css styling of icon*/
+
+.icons-container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
+    gap: 1.5rem;
+    background: rgb(255, 255, 255);
+    align-items: center;
+}
+
+.icons-container .icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+    justify-content: center;
+}
+
+.icons-container .icons i {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 3rem;
+    border: 50%;
+    background: #eee;
+    border-radius: 1rem;
+    color: var(--black);
+    text-align: center;
+}
+
+.icons-container .icons .content h3 {
+    color: var(--yellow);
+    font-size: 1rem;
+}
+
+.icons-container .icons .content p {
+    color: var(--light-color);
+    font-size: 1.4rem;
+}
+
+.icons-container .icons:hover {
+    background: rgb(220, 163, 155);
+    color: #000000;
+}
+
+.icons-container .icons:hover i {
+    background: #f3c9c9;
+}
+
+.icons-container .icons:hover .content h3 {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.icons-container .icons:hover .content p {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+
+.Temples .temples-s {
+    padding-bottom: 5rem;
+}
+
+.Temples .temples-s .box {
+    text-align: center;
+
+}
+
+.Temples .temples-s .box img {
+    width: 100%;
+    opacity: .5;
+    transform: scale(.8);
+}
+
+.Temples .temples-s .box .content {
+    /* opacity: 0; */
+    transform: scale(0);
+    padding-top: 1rem;
+}
+
+.Temples .temples-s .swiper-slide-active img {
+    opacity: 1;
+    transform: scale(1);
+}
+.Temples .temples-s .swiper-slide-active .content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.Temples .temples-s .box .content h3 {
+    font-size: 2rem;
+}
+
+.Temples .temples-s .box .content .price {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--red-shade);
+    padding: 1rem;
+}
+
+.Temples .temples-s .box .content .price span {
+    font-size: 2rem;
+    font-weight: normal;
+    color: rgb(20, 18, 18);
+}
+
+.Temples .temples-s .box .content p {
+    font-size: 1.6rem;
+    padding: 1rem;
+    padding-top: 1.rem;
+    border-top: var(--border);
+    color: var(--light-color);
+}
+
+.Temples .temples-s .box .content p span {
+    color: var(--light-red-shade);
+    font-size: .8rem;
+    padding: .5rem;
+}
+
+.service-details {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    background-color: #8be1da;
+}
+
+
+
+.featured .featured-slider {
+    padding: 1rem;
+    padding-bottom: 4rem;
+}
+
+.featured .featured-slider .box {
+    text-align: center;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    border-radius: 1rem;
+}
+
+.featured .featured-slider .box img {
+    /* height: 13rem; */
+    transform: scale(.9);
+    width: 100%;
+}
+
+.featured .featured-slider .box:hover img {
+    transform: scale(1);
+}
+
+.featured .featured-slider .box h3 {
+    font-size: 2.3rem;
+    color: black;
+}
+
+.featured .featured-slider .box .stars {
+    padding: 1rem;
+}
+
+.featured .featured-slider .box i {
+    font-size: 2rem;
+    color: var(--red-shade);
+}
+
+.featured .featured-slider .box .price {
+    font-size: 1.8rem;
+
+}
+
+
+/* Show service details when 'visible' class is present */
+.service-details.visible {
+    display: block;
+}
+
+/* Style for service cards */
+.service-card {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #1b1717;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.service-card:hover {
+    background-color: #c98787;
+}
+
+.services .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 2fr));
+    gap: 1.5rem;
+    /* background: rgb(255, 255, 255);
+    align-items: center; */
+}
+
+.services .box-container .box {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+}
+
+.services .box-container .box i {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 3rem;
+}
+
+.services .box-container .box h3 {
+    font-size: 2.2rem;
+}
+
+.services .box-container .box p {
+    color: var(--light-color);
+    font-size: 1.4rem;
+    padding: 1rem;
+    line-height: 2rem;
+}
+
+.services .box-container .box:hover {
+    background-color: #13121293;
+}
+
+.services .box-container .box:hover h3 {
+    color: white;
+}
+
+.services .box-container .box:hover p {
+    color: #eee;
+}
+
+.services .box-container .box:hover i {
+    color: #eee;
+}
+
+/* REVIEWS SECTION CSS */
+
+.review h1 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.review .review-slider {
+    padding-bottom: 3rem;
+}
+
+.review .review-slider .box {
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+    /* opacity: .4;
+    transform: scale(0.9); */
+}
+
+.review .review-slider .box img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.review .review-slider .box .content p {
+    font-size: 1.4rem;
+    color: #2e2a2a;
+    padding: 1rem 0;
+}
+
+.review .review-slider .box .content h3 {
+    font-size: 2rem;
+    color: black;
+}
+
+.review .review-slider .box .content .stars {
+    font-size: 1.7rem;
+    color: #d84a4a;
+}
+
+
+/* REVIEWS SECTION CSS ENDS */
+
+
+
+/* CONTACT CSS STARTS */
+
+#contact h3 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.contact .row {
+    margin: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.contact .row .map {
+    flex: 1 1 42rem;
+    width: 100%;
+    padding: 2rem;
+    border: var(--border);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.contact .row form {
+    flex: 1 1 42rem;
+    padding: 2rem;
+    border: var(--border);
+    border-radius: 6px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.contact .row form h3 {
+    font-size: 1.8rem;
+    padding: 1rem;
+
+
+}
+
+.contact .row form .box {
+    margin: 1.5rem 0rem;
+    width: 100%;
+    border: var(--border);
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #000000;
+    text-transform: none;
+    border-radius: 4px;
+    box-shadow: var(--box-shadow);
+
+}
+
+.contact .row form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+
+/* CONTACT CSS ENDS */
+
+
+
+
+
+/*FOOTER SECTION CSS SARTS*/
+.footer {
+    margin-bottom: 0;
+    background-color: rgb(247, 184, 184);
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1rem 0;
+}
+
+.footer .box-container .box h3 {
+    color: var(--black);
+    font-size: 1.7rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.3rem;
+    display: block;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a i {
+    padding-right: 1.5rem;
+    color: var(--black);
+}
+
+.footer .box-container .box a:hover i {
+
+    padding-right: 3rem;
+
+}
+
+.footer .credit {
+    border-top: var(--border);
+    padding: .8rem;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+/*FOOTER SECTION CSS ENDS*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries */
+@media(max-width:1000px) {
+    html {
+        font-size: 50%;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+
+    .header.active {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+}
+
+@media(max-width:800px) {
+
+    #menu-btn {
+        font-size: 2.5em;
+        cursor: pointer;
+        display: block;
+    }
+
+    #menu-btn.fa-times {
+        transform: rotate(90deg);
+    }
+
+    .header #login-btn i {
+        display: block;
+    }
+
+    .header #login-btn .btn {
+        display: none;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        /*Hide the navbar*/
+
+    }
+
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        /*to display full block navbar*/
+    }
+
+    .header .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 2rem;
+        /* clip-path: polygon(0 0, 100% 0, 100% 0 0 0);*/
+        /* kuch farak nahi pad raha */
+    }
+
+
+}
+
+@media(max-width:660px) {
+    html {
+        font-size: 45%;
+    }
+
+    .header .navbar a {
+        margin: 5px;
+        font-size: 3rem;
+
+    }
+}
+
+@media(max-width:350px) {
+    html {
+        font-size: 40%;
+    }
+
+    .header .navbar a {
+        margin: 0;
+        font-size: 1.5rem;
+
+    }
+}
