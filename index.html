@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="Temples_in_India.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Temples in India</title>
+
+</head>
+
+<body>
+
+    <!-- Headersection starts -->
+
+    <header class="header">
+
+        <i id="menu-btn" class="fa-solid fa-bars"></i>
+
+        <!-- <button id="menu-btn" onclick="hide()">
+            Menu
+            <i class="fa-solid fa-bars"></i>
+        </button> -->
+
+
+        <a href="#" class="logo"><span>🛕TEMPLES</span></a>
+
+        <nav class="navbar" id="navbar">
+            <a href="#Home">Home</a>
+            <a href="#Temples">Temples</a>
+            <a href="#services">Services</a>
+            <a href="#featured">featured</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div id="login-btn">
+            <button class="btn">login</button>
+            <i style='font-size:24px' class='fas'>&#xf406;</i>
+            <!-- <i class='fas'>&#xf406;</i> -->
+        </div>
+
+    </header>
+
+    <!-- Headersection ends -->
+
+
+
+    <!-- LOGIN FORM STARS -->
+
+    <div class="login-form">
+
+        <span id="close-login-form" class="fa-solid fa-xmark"></span>
+
+        <!-- <i class="fa-solid fa-xmark"></i> -->
+        <form action="">
+            <h3>User login</h3>
+            <input type="email" placeholder="email" class="box">
+            <input type="password" placeholder="password" class="box">
+            <p>Forget your password <a href="#">click here</a></p>
+            <input type="submit" value="login" class="btn">
+            <p>or login with</p>
+            <div class="buttons">
+                <a href="#" class="btn">google</a>
+                <a href="#" class="btn">facebook</a>
+            </div>
+            <p>don't have an account <a href="#" id="create-btn">create</a></p>
+
+        </form>
+
+    </div>
+
+    <!-- LOGIN FORM ENDS -->
+
+
+    <!-- CREATE FORM STARS -->
+
+    <div class="create-form">
+
+        <span id="create-form-close" class="fa-solid fa-xmark"></span>
+
+        <!-- <i class="fa-solid fa-xmark"></i> -->
+        <form action="">
+            <h3>Create Account</h3>
+            <input type="text" placeholder="First name" class="box">
+            <input type="text" placeholder="Last name" class="box">
+            <input type="email" placeholder="email" class="box">
+            <input type="password" placeholder="password" class="box">
+            <input type="submit" value="Sign up" class="btn">
+            <p>already have an account <a href="#" id="login2">Login</a></p>
+        </form>
+
+    </div>
+
+    <!-- CREATE FORM ENDS -->
+
+
+
+    <!-- HOME SECTION START -->
+
+
+    <section class="home" id="Home">
+        <!-- data-* attribute gives ability to acces stored data in all html elements. wecan use this data attribute directly in Js  -->
+
+        <h1 class="home-page" data-speed="-2">Temples In India</h1>
+        <img src="images/The_Kailaśa_temple,_Cave_16.jpg" alt="" class="home-page"
+            data-speed="5">
+        <a href="#Temples" class="home-page" data-speed="7">Explore Temples</a>
+
+    </section>
+
+
+
+    <!-- HOME SECTION ENDS -->
+
+
+    <!-- ICONS TO TELL MORE ABOUT OUR TEMPLE NETWORK -->
+    <section class="icons-container">
+        <div class="icons">
+            <i class="fa fa-home"></i>
+            <div class="content">
+                <h3>5000+</h3>
+                <p>temples across India</p>
+            </div>
+        </div>
+    
+        <div class="icons">
+            <i class="fa fa-users"></i>
+            <div class="content">
+                <h3>10M+</h3>
+                <p>devotees monthly</p>
+            </div>
+        </div>
+    
+        <div class="icons">
+            <i class="fa fa-map-marker"></i>
+            <div class="content">
+                <h3>29</h3>
+                <p>states with historic temples</p>
+            </div>
+        </div>
+    
+        <div class="icons">
+            <i class="fa fa-heart"></i>
+            <div class="content">
+                <h3>1000+</h3>
+                <p>spiritual experiences</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- VEHICLES SECTION STARTS -->
+
+    <section id="Temples" class="Temples">
+
+        <h1 class="heading">Ancient<span> Temples</span></h1>
+
+        <div class="swiper temples-s">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="images/T1.jpg" alt="">
+                    <div class="content">
+                        <h3>Kailasa Temple</h3>
+                        <div class="price"><span>Location: </span>Chhatrapati Sambhajinagar</div>
+                        <a href="Kailasa_Temples.html" class="btn">check out</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/T2.jpg" alt="">
+                    <div class="content">
+                        <h3>Shore Temple</h3>
+                        <div class="price"><span>Location: </span> Tamil-Nadu</div>
+                        <a href="Shore_Temples.html" class="btn">check out</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/T3.jpg" alt="">
+                    <div class="content">
+                        <h3>Dwarkadhish Temple</h3>
+                        <div class="price"><span>Location: </span> Dwarka</div>
+                        <a href="Dwarkadhish_Temple.html" class="btn">check out</a>
+                    </div>
+                </div>
+            </div>   
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+
+    <!-- VEHICLEs SECTION ENDS -->
+
+
+    <section class="featured" id="featured">
+        <h1 class="heading"><span>Temples </span> in India</h1>
+
+        <div class="swiper featured-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="images/T1.jpg"
+                        alt="">
+                    <h3>Kailasa Temple</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">Chhatrapati Sambhajinagar</div>
+                    <a href="Kailasa_Temples.html" target="_blank"  class="btn">check out</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/T2.jpg" alt="">
+                    <h3>Shore Temple</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">Tamil-Nadu</div>
+                    <a href="Shore_Temples.html" target="_blank"  class="btn">check out</a>
+                </div>
+
+
+                <div class="swiper-slide box">
+                    <img src="images/T3.jpg"
+                        alt="">
+                    <h3>Dwarkadhish Temple</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">Gujrat</div>
+                    <a href="Dwarkadhish_Temple.html" target="_blank"  class="btn">check out</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/T4.jpg"
+                        alt="">
+                    <h3>Badami Cave Temples</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+
+                    </div>
+                    <div class="price">Karnataka</div>
+                    <a href="Badami_Cave_Temple.html" target="_blank"  class="btn">check out</a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="swiper featured-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="images/T5.jpg" alt="">
+                    <h3>Konark Sun Temple</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">Konark</div>
+                    <a href="Konark_Sun_Temple.html" target="_blank"  class="btn">check out</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/T6.jpg"
+                        alt="">
+                    <h3>Halasuru Someshwara Temple</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">Bengaluru</div>
+                    <a href="Halasuru_Temple.html" target="_blank" class="btn">check out</a>
+                </div>
+
+
+                <div class="swiper-slide box">
+                    <img src="images/T7.jpg"
+                        alt="">
+                    <h3>Airavatesvara Temple</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">Tamil-Nadu</div>
+                    <a href="Airavatesvara_Temple.html" target="_blank"  class="btn">check out</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/T8.jpg"
+                        alt="">
+                    <h3>Lingaraja Temple</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fa-regular fa-star-sharp"></i>
+                    </div>
+                    <div class="price">Odisha</div>
+                    <a href="Lingaraja_Temple.html" target="_blank"  class="btn">check out</a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </section>
+
+
+
+    <section id="services" class="services">
+        <h1 class="heading">Temple <span>Services</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-praying-hands"></i>
+                <h3>Puja Booking</h3>
+                <p>Book daily or special pujas and rituals at various temples.</p>
+                <p>For more details, contact us.</p>
+                <a href="#contact" class="btn">Enquire</a>
+            </div>
+            <div class="box">
+                <i class="fas fa-users"></i>
+                <h3>Guided Tours</h3>
+                <p>Join spiritual and heritage tours guided by local experts.</p>
+                <p>For more details, contact us.</p>
+                <a href="#contact" class="btn">Enquire</a>
+            </div>
+            <div class="box">
+                <i class="fas fa-hotel"></i>
+                <h3>Accommodation</h3>
+                <p>Book affordable and nearby stays during temple visits.</p>
+                <p>For more details, contact us.</p>
+                <a href="#contact" class="btn">Enquire</a>
+            </div>
+            <div class="box">
+                <i class="fas fa-utensils"></i>
+                <h3>Prasadam Services</h3>
+                <p>Order blessed prasadam for home delivery or temple pick-up.</p>
+                <p>For more details, contact us.</p>
+                <a href="#contact" class="btn">Enquire</a>
+            </div>
+            <div class="box">
+                <i class="fas fa-hands-helping"></i>
+                <h3>Donations & Seva</h3>
+                <p>Contribute to temple maintenance, annadanam, and seva programs.</p>
+                <p>For more details, contact us.</p>
+                <a href="#contact" class="btn">Enquire</a>
+            </div>
+            <div class="box">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Event Updates</h3>
+                <p>Stay updated on temple festivals, yatras, and cultural programs.</p>
+                <p>For more details, contact us.</p>
+                <a href="#contact" class="btn">Enquire</a>
+            </div>
+        </div>
+    </section>    
+
+
+    <!-- CONTACT SECTION -->
+
+    <section class="contact" id="contact">
+
+        <h3 class="heading"><span>Contact </span> us</h3>
+
+        <div class="row">
+
+            <iframe class="map"
+            src="https://www.google.com/maps/place/Padmabhushan+Dr.+Vasantraodada+Patil+Mahavidyalay+Tasgaon/@17.0230399,74.6049225,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc13e2d87714d17:0xab9aa2ca711da8a7!8m2!3d17.0230399!4d74.6049225!16s%2Fg%2F11cmr08h39?entry=ttu&g_ep=EgoyMDI1MDQwOC4wIKXMDSoASAFQAw%3D%3D"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <form action="">
+                <h3>get in touch</h3>
+                <input type="text" placeholder="name" class="box">
+                <input type="email" placeholder="email" class="box">
+                <input type="number" placeholder="mobile no" class="box">
+                <textarea placeholder="message" name="" id="" class="box" cols="30" rows="10"></textarea>
+                <input type="submit" value="send message" class="btn">
+            </form>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- CONTACT SECTION ENDS -->
+
+
+    <!-- Footer Section HTML -->
+    <section class="footer">
+
+        <div class="box-container">
+
+
+            <div class="box">
+                <h3>Quick links</h3>
+                <a href="#Home"><i class="fas fa-arrow-right"></i> Home </a>
+                <a href="#Temples"><i class="fas fa-arrow-right"></i> Temples </a>
+                <a href="#services"><i class="fas fa-arrow-right"></i> Services </a>
+                <a href="#featured"><i class="fas fa-arrow-right"></i> featured </a>
+                <a href="#contact"><i class="fas fa-arrow-right"></i> Contact </a>
+            </div>
+
+            <div class="box">
+                <h3>Quick links</h3>
+                <a href="#"><i class="fas fa-phone"></i> +123-456-7890 </a>
+                <a href="#"><i class="fas fa-phone"></i> +111-222-4444 </a>
+                <a href="#"><i class="fas fa-envelope"></i> query@.com </a>
+                <a href="#"><i class="fas fa-envelope"></i> services@.com </a>
+            </div>
+
+            <div class="box">
+                <h3>Quick links</h3>
+                <a href="" target="_blank"><i class="fa-brands fa-facebook-f"></i> facebook
+                </a>
+                <a href="" target="_blank"><i class="fa-brands fa-twitter"></i> twitter
+                </a>
+                <a href="" target="_blank"><i class="fa-brands fa-instagram"></i>
+                    instagram
+                </a>
+                <a href="" target="_blank"><i class="fa-brands fa-linkedin-in"></i> linkedin
+                </a>
+
+            </div>
+
+        </div>
+        <div class="credit">@ All right reserve</div>
+
+    </section>
+
+
+    <!-- FOOTER SECTION HTML ENDS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <script src="Temples_in_India.js"></script>
+
+
+</body>
+
+</html>
